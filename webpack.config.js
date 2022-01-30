@@ -1,10 +1,10 @@
 import Hwp from 'html-webpack-plugin';
 
 export default {
-  mode: process.env.NODE_ENV || 'development',
+  mode: process.env.NODE_ENV,
   plugins: [
     new Hwp({
-      template: 'src/index.html',
+      template: 'index.html',
     }),
   ],
   output: {
