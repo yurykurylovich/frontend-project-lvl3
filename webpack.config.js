@@ -1,9 +1,9 @@
-import Hwp from 'html-webpack-plugin';
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 export default {
-  mode: process.env.NODE_ENV,
+  mode: process.env.NODE_ENV || 'development',
   plugins: [
-    new Hwp({
+    new HtmlWebpackPlugin({
       template: 'index.html',
     }),
   ],

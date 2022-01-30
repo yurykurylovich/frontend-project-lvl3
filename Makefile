@@ -13,4 +13,5 @@ lint_fix:
 		npx eslint . --fix
 
 build:
-		npm run build
+		rm -rf dist
+		NODE_ENV=production npx webpack
