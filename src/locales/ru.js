@@ -17,5 +17,5 @@ export default {
       example: 'Пример: {{ link }}',
       exampleLink: 'https://ru.hexlet.io/lessons.rss',
     },
-  }
-}
+  },
+};

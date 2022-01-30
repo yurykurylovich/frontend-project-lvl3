@@ -9,5 +9,8 @@ serve:
 lint:
 		npx eslint .
 
+lint_fix:
+		npx eslint . --fix
+
 build:
 		npm run build

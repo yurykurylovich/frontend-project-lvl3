@@ -23,9 +23,11 @@ export const formTextsGroupEl = createElement('div', { class: 'row' });
 export const formExampleEl = createElement('p', {
   classes: ['col', 'fw-bold', 'text-break', 'text-secondary'],
 }, 'Пример: ');
-export const formExampleLinkEl = createElement('span',
+export const formExampleLinkEl = createElement(
+  'span',
   { class: 'user-select-all' },
-  'https://ru.hexlet.io/lessons.rss');
+  'https://ru.hexlet.io/lessons.rss',
+);
 export const formStatusEl = createElement('p', {
   classes: ['col', 'me-1', 'text-break', 'text-success', 'text-end'],
 }, 'Готов к работе');
