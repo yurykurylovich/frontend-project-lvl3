@@ -280,13 +280,43 @@ eval("module.exports = \"data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/20
 
 /***/ }),
 
+/***/ "./src/components/header.js":
+/*!**********************************!*\
+  !*** ./src/components/header.js ***!
+  \**********************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _helpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers.js */ \"./src/helpers.js\");\n/* harmony import */ var _headerForm_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./headerForm.js */ \"./src/components/headerForm.js\");\n\n\n\nconst headerContainerEl = (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createElement)('div', {\n  classes: ['container', 'py-5'],\n});\n\nheaderContainerEl.append(_headerForm_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (headerContainerEl);\n\n\n//# sourceURL=webpack://@hexlet/code/./src/components/header.js?");
+
+/***/ }),
+
+/***/ "./src/components/headerForm.js":
+/*!**************************************!*\
+  !*** ./src/components/headerForm.js ***!
+  \**************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"rssFormEl\": () => (/* binding */ rssFormEl),\n/* harmony export */   \"inputGroupEl\": () => (/* binding */ inputGroupEl),\n/* harmony export */   \"inputEl\": () => (/* binding */ inputEl),\n/* harmony export */   \"buttonEl\": () => (/* binding */ buttonEl),\n/* harmony export */   \"formTextsGroupEl\": () => (/* binding */ formTextsGroupEl),\n/* harmony export */   \"formExampleEl\": () => (/* binding */ formExampleEl),\n/* harmony export */   \"formExampleLinkEl\": () => (/* binding */ formExampleLinkEl),\n/* harmony export */   \"formStatusEl\": () => (/* binding */ formStatusEl),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _helpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers.js */ \"./src/helpers.js\");\n\n\nconst rssFormEl = (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createElement)('form');\n\nconst inputGroupEl = (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createElement)('div', {\n  classes: ['input-group', 'input-group-lg', 'py-2'],\n});\nconst inputEl = (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createElement)('input', {\n  id: 'url',\n  name: 'url',\n  type: 'url',\n  required: true,\n  class: 'form-control',\n  'aria-describedby': 'url-add',\n});\nconst buttonEl = (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createElement)('button', {\n  id: 'url-add',\n  type: 'submit',\n  classes: ['btn', 'btn-primary'],\n}, 'Добавить');\n\nconst formTextsGroupEl = (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createElement)('div', { class: 'row' });\nconst formExampleEl = (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createElement)('p', {\n  classes: ['col', 'fw-bold', 'text-break', 'text-secondary'],\n}, 'Пример: ');\nconst formExampleLinkEl = (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createElement)('span',\n  { class: 'user-select-all' },\n  'https://ru.hexlet.io/lessons.rss');\nconst formStatusEl = (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createElement)('p', {\n  classes: ['col', 'me-1', 'text-break', 'text-success', 'text-end'],\n}, 'Готов к работе');\n\nformExampleEl.append(formExampleLinkEl);\nformTextsGroupEl.append(formExampleEl, formStatusEl);\ninputGroupEl.append(inputEl, buttonEl);\nrssFormEl.append(inputGroupEl, formTextsGroupEl);\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (rssFormEl);\n\n\n//# sourceURL=webpack://@hexlet/code/./src/components/headerForm.js?");
+
+/***/ }),
+
+/***/ "./src/helpers.js":
+/*!************************!*\
+  !*** ./src/helpers.js ***!
+  \************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createElement\": () => (/* binding */ createElement),\n/* harmony export */   \"noop\": () => (/* binding */ noop)\n/* harmony export */ });\nconst createElement = (name, attributes = {}, textContent = '') => {\n  const defaultAttributes = { classes: [] };\n  const allAttributes = { ...defaultAttributes, ...attributes };\n  const { classes, ...otherAttributes } = allAttributes;\n\n  const element = document.createElement(name);\n  element.textContent = textContent;\n  if (classes.length > 0) element.classList.add(...classes);\n  Object.entries(otherAttributes).forEach(([key, value]) => element.setAttribute(key, value));\n\n  return element;\n};\n\nconst noop = () => {};\n\n\n//# sourceURL=webpack://@hexlet/code/./src/helpers.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n\n\nconst createElement = (name, attributes = {}, textContent = '') => {\n  const defaultAttributes = { classes: [] };\n  const allAttributes = { ...defaultAttributes, ...attributes };\n  const { classes, ...otherAttributes } = allAttributes;\n\n  const element = document.createElement(name);\n  element.textContent = textContent;\n  if (classes.length > 0) element.classList.add(...classes);\n  Object.entries(otherAttributes).forEach(([key, value]) => element.setAttribute(key, value));\n\n  return element;\n};\n\nconst containerEl = createElement('div', { class: 'container'});\nconst col1El = createElement('div', {class: 'col'});\nconst col2El = createElement('div', {class: 'col'});\nconst rssFormEl = createElement('form', { class: 'row'});\nconst rssInputEl = createElement('input', {\n  id: 'url',\n  class: 'form-control',\n  name: 'url',\n  type: 'text',\n});\nconst rssButtonEl = createElement('button', {\n  type: 'button',\n  classes: ['btn', 'btn-primary'],\n}, 'Добавить');\n\ncol1El.append(rssInputEl);\ncol2El.append(rssButtonEl);\nrssFormEl.append(col1El, col2El);\ncontainerEl.append(rssFormEl);\ndocument.body.append(containerEl);\n\n\n//# sourceURL=webpack://@hexlet/code/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var _components_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/header.js */ \"./src/components/header.js\");\n\n\n\ndocument.body.append(_components_header_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\n\n//# sourceURL=webpack://@hexlet/code/./src/index.js?");
 
 /***/ })
 

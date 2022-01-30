@@ -4,7 +4,7 @@ export default {
   mode: process.env.NODE_ENV || 'development',
   plugins: [
     new Hwp({
-      title: 'RSS Aggregator',
+      template: 'src/index.html',
     }),
   ],
   output: {
