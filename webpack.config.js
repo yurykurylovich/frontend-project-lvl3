@@ -3,7 +3,9 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 export default {
   mode: process.env.NODE_ENV,
   plugins: [
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+
+    }),
   ],
   output: {
     clean: true,

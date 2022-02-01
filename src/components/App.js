@@ -1,25 +1,25 @@
 import Header from './Header.js';
 
-const htmlEl = document.querySelector('html');
-const titleEl = document.querySelector('title');
+const elements = {
+  html: document.querySelector('html'),
+  title: document.querySelector('title'),
+  body: document.querySelector('body'),
+};
 
 export default class App {
   constructor(t) {
     this.t = t;
     this.header = new Header(t);
+    this.elements = {
+      ...elements,
+      header: this.header.elements,
+    };
   }
 
-  init(state) {
-    htmlEl.setAttribute('lang', state.app.lang);
-    titleEl.textContent = this.t('appName');
-    this.header.init();
-  }
-
-  render(body) {
-    const headerEls = this.header.getElements();
-
-    body.append(headerEls.container);
-
-    headerEls.form.input.focus();
+  init(view) {
+    this.header.init(view);
+    this.elements.title.textContent = this.t('appName');
+    this.elements.html.setAttribute('lang', view.app.lng);
+    this.elements.body.append(this.elements.header.container);
   }
 }
