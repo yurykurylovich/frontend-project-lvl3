@@ -6,9 +6,9 @@ const run = async (body) => {
   const state = {
     app: {
       env: process.env.NODE_ENV,
-      isProd: process.env.NODE_ENV === 'production',
+      isProd: (process.env.NODE_ENV === 'production'),
       lng: 'ru',
-    }
+    },
   };
 
   const i18n = i18next.createInstance();
