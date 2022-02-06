@@ -13,8 +13,10 @@ const run = async () => {
 
   const state = {
     app: {
+      isProd: (config.NODE_ENV === 'production'),
       lng: 'ru',
     },
+    feedsUpdateTimestamp: null,
     uiState: {
       form: {
         state: 'ready',
@@ -36,6 +38,10 @@ const run = async () => {
       const view = initView(state, app);
       app.init(view);
       app.header.form.renderEmpty();
+
+      rssFeeder.addUpdateListener(() => {
+        view.feedsUpdateTimestamp = Date.now();
+      });
     });
 };
 

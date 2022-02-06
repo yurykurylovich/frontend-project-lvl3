@@ -31,4 +31,9 @@ export default class Reader {
     );
     this.elements.container.append(this.elements.row);
   }
+
+  render() {
+    this.posts.render();
+    this.feeds.render();
+  }
 }

@@ -14,8 +14,8 @@ const elements = {
     name: 'url',
     type: 'url',
     required: true,
-    class: 'form-control',
     'aria-describedby': 'url-add',
+    classes: ['form-control'],
   }),
   button: createElement('button', {
     id: 'url-add',
@@ -27,7 +27,7 @@ const elements = {
     classes: ['ms-1', 'my-1', 'fw-bold', 'text-break', 'text-secondary'],
   }),
   exampleText: createElement('span'),
-  exampleLink: createElement('span', { class: 'user-select-all' }),
+  exampleLink: createElement('span', { classes: ['user-select-all'] }),
   formStatus: createElement('p', {
     classes: ['me-1', 'mt-0', 'text-break', 'text-end'],
   }),
@@ -63,7 +63,8 @@ export default class Form {
 
       view.uiState.form.state = 'processing';
 
-      this.rssFeeder.addByUrl(url, 'fakeMode')
+      this.rssFeeder.addByUrl(url)
+      // this.rssFeeder.addByUrl(url, 'fakeMode')
         .then(() => {
           view.uiState.form.errorType = null;
           view.uiState.form.state = 'success';
